@@ -6,7 +6,7 @@ class OpenUspTukubai < Formula
   head "https://github.com/usp-engineers-community/Open-usp-Tukubai.git", :branch => "master"
 
   def install
-    ENV.append "LOCALBASE", "/usr/local/Cellar/open-usp-tukubai/#{version}"
+    ENV.append "LOCALBASE", prefix
     system "make", "install"
   end
 
